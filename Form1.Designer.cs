@@ -62,12 +62,6 @@
             this.textBoxCtrFaxDetailsInResponse = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column_Test5id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Test5status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Test5units = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Test5costPerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Test5contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Test5subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonNextImage = new System.Windows.Forms.Button();
             this.buttonPrevImage = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -81,6 +75,16 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.checkBoxSaveImageAsTif = new System.Windows.Forms.CheckBox();
+            this.buttonTest3A = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.Column_Test5id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Test5status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Test5units = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Test5costPerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Test5SenderCSID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Test5contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Test5DestFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Test5subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -255,7 +259,7 @@
             // 
             // buttonTest3
             // 
-            this.buttonTest3.Location = new System.Drawing.Point(108, 379);
+            this.buttonTest3.Location = new System.Drawing.Point(108, 380);
             this.buttonTest3.Name = "buttonTest3";
             this.buttonTest3.Size = new System.Drawing.Size(75, 23);
             this.buttonTest3.TabIndex = 17;
@@ -276,7 +280,7 @@
             // 
             // textBoxTest4BatchID
             // 
-            this.textBoxTest4BatchID.Location = new System.Drawing.Point(252, 478);
+            this.textBoxTest4BatchID.Location = new System.Drawing.Point(252, 509);
             this.textBoxTest4BatchID.Name = "textBoxTest4BatchID";
             this.textBoxTest4BatchID.Size = new System.Drawing.Size(100, 20);
             this.textBoxTest4BatchID.TabIndex = 24;
@@ -284,7 +288,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(198, 482);
+            this.label14.Location = new System.Drawing.Point(198, 513);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(48, 13);
             this.label14.TabIndex = 23;
@@ -292,7 +296,7 @@
             // 
             // buttonTest4
             // 
-            this.buttonTest4.Location = new System.Drawing.Point(108, 476);
+            this.buttonTest4.Location = new System.Drawing.Point(108, 507);
             this.buttonTest4.Name = "buttonTest4";
             this.buttonTest4.Size = new System.Drawing.Size(75, 23);
             this.buttonTest4.TabIndex = 22;
@@ -304,7 +308,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(41, 429);
+            this.label15.Location = new System.Drawing.Point(41, 460);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(495, 32);
             this.label15.TabIndex = 21;
@@ -314,7 +318,7 @@
             // 
             // textBoxTest4ListChildFaxIDs
             // 
-            this.textBoxTest4ListChildFaxIDs.Location = new System.Drawing.Point(273, 504);
+            this.textBoxTest4ListChildFaxIDs.Location = new System.Drawing.Point(273, 535);
             this.textBoxTest4ListChildFaxIDs.Name = "textBoxTest4ListChildFaxIDs";
             this.textBoxTest4ListChildFaxIDs.ReadOnly = true;
             this.textBoxTest4ListChildFaxIDs.Size = new System.Drawing.Size(263, 20);
@@ -323,7 +327,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(198, 508);
+            this.label13.Location = new System.Drawing.Point(198, 539);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(69, 13);
             this.label13.TabIndex = 25;
@@ -331,7 +335,7 @@
             // 
             // textBoxTest5ListIDs
             // 
-            this.textBoxTest5ListIDs.Location = new System.Drawing.Point(266, 607);
+            this.textBoxTest5ListIDs.Location = new System.Drawing.Point(266, 638);
             this.textBoxTest5ListIDs.Name = "textBoxTest5ListIDs";
             this.textBoxTest5ListIDs.Size = new System.Drawing.Size(263, 20);
             this.textBoxTest5ListIDs.TabIndex = 32;
@@ -339,7 +343,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(198, 611);
+            this.label16.Location = new System.Drawing.Point(198, 642);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(62, 13);
             this.label16.TabIndex = 31;
@@ -347,7 +351,7 @@
             // 
             // buttonTest5
             // 
-            this.buttonTest5.Location = new System.Drawing.Point(108, 603);
+            this.buttonTest5.Location = new System.Drawing.Point(108, 634);
             this.buttonTest5.Name = "buttonTest5";
             this.buttonTest5.Size = new System.Drawing.Size(75, 23);
             this.buttonTest5.TabIndex = 28;
@@ -359,7 +363,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(41, 551);
+            this.label18.Location = new System.Drawing.Point(41, 582);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(486, 32);
             this.label18.TabIndex = 27;
@@ -368,7 +372,7 @@
             // 
             // textBoxCtrFaxDetailsInResponse
             // 
-            this.textBoxCtrFaxDetailsInResponse.Location = new System.Drawing.Point(620, 633);
+            this.textBoxCtrFaxDetailsInResponse.Location = new System.Drawing.Point(621, 664);
             this.textBoxCtrFaxDetailsInResponse.Name = "textBoxCtrFaxDetailsInResponse";
             this.textBoxCtrFaxDetailsInResponse.ReadOnly = true;
             this.textBoxCtrFaxDetailsInResponse.Size = new System.Drawing.Size(45, 20);
@@ -377,7 +381,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(448, 636);
+            this.label20.Location = new System.Drawing.Point(449, 667);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(166, 13);
             this.label20.TabIndex = 35;
@@ -394,15 +398,160 @@
             this.Column_Test5status,
             this.Column_Test5units,
             this.Column_Test5costPerUnit,
+            this.Column_Test5SenderCSID,
             this.Column_Test5contact,
+            this.Column_Test5DestFax,
             this.Column_Test5subject});
-            this.dataGridView1.Location = new System.Drawing.Point(89, 659);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 690);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(647, 135);
+            this.dataGridView1.Size = new System.Drawing.Size(746, 135);
             this.dataGridView1.TabIndex = 45;
+            // 
+            // buttonNextImage
+            // 
+            this.buttonNextImage.Location = new System.Drawing.Point(1148, 736);
+            this.buttonNextImage.Name = "buttonNextImage";
+            this.buttonNextImage.Size = new System.Drawing.Size(64, 23);
+            this.buttonNextImage.TabIndex = 52;
+            this.buttonNextImage.Text = "Next page";
+            this.buttonNextImage.UseVisualStyleBackColor = true;
+            this.buttonNextImage.Click += new System.EventHandler(this.buttonNextImage_Click);
+            // 
+            // buttonPrevImage
+            // 
+            this.buttonPrevImage.Location = new System.Drawing.Point(1068, 736);
+            this.buttonPrevImage.Name = "buttonPrevImage";
+            this.buttonPrevImage.Size = new System.Drawing.Size(64, 23);
+            this.buttonPrevImage.TabIndex = 51;
+            this.buttonPrevImage.Text = "Prev page";
+            this.buttonPrevImage.UseVisualStyleBackColor = true;
+            this.buttonPrevImage.Click += new System.EventHandler(this.buttonPrevImage_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(864, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(502, 650);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
+            // buttonTest7
+            // 
+            this.buttonTest7.Location = new System.Drawing.Point(932, 47);
+            this.buttonTest7.Name = "buttonTest7";
+            this.buttonTest7.Size = new System.Drawing.Size(75, 23);
+            this.buttonTest7.TabIndex = 46;
+            this.buttonTest7.Text = "Test 7";
+            this.buttonTest7.UseVisualStyleBackColor = true;
+            this.buttonTest7.Click += new System.EventHandler(this.buttonTest7_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(889, 17);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(134, 16);
+            this.label19.TabIndex = 53;
+            this.label19.Text = "Test 7:  GetFaxImage";
+            // 
+            // textBoxTest7FaxID
+            // 
+            this.textBoxTest7FaxID.Location = new System.Drawing.Point(1068, 49);
+            this.textBoxTest7FaxID.Name = "textBoxTest7FaxID";
+            this.textBoxTest7FaxID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTest7FaxID.TabIndex = 55;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(1027, 53);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(35, 13);
+            this.label21.TabIndex = 54;
+            this.label21.Text = "faxID:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(936, 742);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(35, 13);
+            this.label22.TabIndex = 56;
+            this.label22.Text = "Page:";
+            // 
+            // textBoxPageNofN
+            // 
+            this.textBoxPageNofN.Location = new System.Drawing.Point(977, 739);
+            this.textBoxPageNofN.Name = "textBoxPageNofN";
+            this.textBoxPageNofN.ReadOnly = true;
+            this.textBoxPageNofN.Size = new System.Drawing.Size(71, 20);
+            this.textBoxPageNofN.TabIndex = 57;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label17.Location = new System.Drawing.Point(542, 507);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(207, 13);
+            this.label17.TabIndex = 58;
+            this.label17.Text = "You may want to save these for later tests.";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(41, 847);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(387, 64);
+            this.label25.TabIndex = 59;
+            this.label25.Text = resources.GetString("label25.Text");
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(871, 778);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(493, 48);
+            this.label24.TabIndex = 60;
+            this.label24.Text = resources.GetString("label24.Text");
+            // 
+            // checkBoxSaveImageAsTif
+            // 
+            this.checkBoxSaveImageAsTif.AutoSize = true;
+            this.checkBoxSaveImageAsTif.Location = new System.Drawing.Point(1033, 18);
+            this.checkBoxSaveImageAsTif.Name = "checkBoxSaveImageAsTif";
+            this.checkBoxSaveImageAsTif.Size = new System.Drawing.Size(187, 17);
+            this.checkBoxSaveImageAsTif.TabIndex = 61;
+            this.checkBoxSaveImageAsTif.Text = "Open as PDF (see Note for Test7)";
+            this.checkBoxSaveImageAsTif.UseVisualStyleBackColor = true;
+            // 
+            // buttonTest3A
+            // 
+            this.buttonTest3A.Location = new System.Drawing.Point(108, 412);
+            this.buttonTest3A.Name = "buttonTest3A";
+            this.buttonTest3A.Size = new System.Drawing.Size(75, 23);
+            this.buttonTest3A.TabIndex = 62;
+            this.buttonTest3A.Text = "Test 3a";
+            this.buttonTest3A.UseVisualStyleBackColor = true;
+            this.buttonTest3A.Click += new System.EventHandler(this.buttonTest3A_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(189, 417);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(225, 13);
+            this.label23.TabIndex = 63;
+            this.label23.Text = "Display special GUI for faxing a pdf document.";
             // 
             // Column_Test5id
             // 
@@ -435,13 +584,28 @@
             this.Column_Test5costPerUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column_Test5costPerUnit.Width = 60;
             // 
+            // Column_Test5SenderCSID
+            // 
+            this.Column_Test5SenderCSID.HeaderText = "Sender CSID";
+            this.Column_Test5SenderCSID.Name = "Column_Test5SenderCSID";
+            this.Column_Test5SenderCSID.ReadOnly = true;
+            this.Column_Test5SenderCSID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column_Test5SenderCSID.Width = 80;
+            // 
             // Column_Test5contact
             // 
             this.Column_Test5contact.HeaderText = "contact";
             this.Column_Test5contact.Name = "Column_Test5contact";
             this.Column_Test5contact.ReadOnly = true;
             this.Column_Test5contact.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column_Test5contact.Width = 175;
+            this.Column_Test5contact.Width = 150;
+            // 
+            // Column_Test5DestFax
+            // 
+            this.Column_Test5DestFax.HeaderText = "Dest. Fax";
+            this.Column_Test5DestFax.Name = "Column_Test5DestFax";
+            this.Column_Test5DestFax.ReadOnly = true;
+            this.Column_Test5DestFax.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column_Test5subject
             // 
@@ -449,137 +613,15 @@
             this.Column_Test5subject.Name = "Column_Test5subject";
             this.Column_Test5subject.ReadOnly = true;
             this.Column_Test5subject.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column_Test5subject.Width = 175;
-            // 
-            // buttonNextImage
-            // 
-            this.buttonNextImage.Location = new System.Drawing.Point(1045, 736);
-            this.buttonNextImage.Name = "buttonNextImage";
-            this.buttonNextImage.Size = new System.Drawing.Size(64, 23);
-            this.buttonNextImage.TabIndex = 52;
-            this.buttonNextImage.Text = "Next page";
-            this.buttonNextImage.UseVisualStyleBackColor = true;
-            this.buttonNextImage.Click += new System.EventHandler(this.buttonNextImage_Click);
-            // 
-            // buttonPrevImage
-            // 
-            this.buttonPrevImage.Location = new System.Drawing.Point(965, 736);
-            this.buttonPrevImage.Name = "buttonPrevImage";
-            this.buttonPrevImage.Size = new System.Drawing.Size(64, 23);
-            this.buttonPrevImage.TabIndex = 51;
-            this.buttonPrevImage.Text = "Prev page";
-            this.buttonPrevImage.UseVisualStyleBackColor = true;
-            this.buttonPrevImage.Click += new System.EventHandler(this.buttonPrevImage_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(761, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(502, 650);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
-            // 
-            // buttonTest7
-            // 
-            this.buttonTest7.Location = new System.Drawing.Point(829, 47);
-            this.buttonTest7.Name = "buttonTest7";
-            this.buttonTest7.Size = new System.Drawing.Size(75, 23);
-            this.buttonTest7.TabIndex = 46;
-            this.buttonTest7.Text = "Test 7";
-            this.buttonTest7.UseVisualStyleBackColor = true;
-            this.buttonTest7.Click += new System.EventHandler(this.buttonTest7_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(786, 17);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(134, 16);
-            this.label19.TabIndex = 53;
-            this.label19.Text = "Test 7:  GetFaxImage";
-            // 
-            // textBoxTest7FaxID
-            // 
-            this.textBoxTest7FaxID.Location = new System.Drawing.Point(965, 49);
-            this.textBoxTest7FaxID.Name = "textBoxTest7FaxID";
-            this.textBoxTest7FaxID.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTest7FaxID.TabIndex = 55;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(924, 53);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(35, 13);
-            this.label21.TabIndex = 54;
-            this.label21.Text = "faxID:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(833, 742);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(35, 13);
-            this.label22.TabIndex = 56;
-            this.label22.Text = "Page:";
-            // 
-            // textBoxPageNofN
-            // 
-            this.textBoxPageNofN.Location = new System.Drawing.Point(874, 739);
-            this.textBoxPageNofN.Name = "textBoxPageNofN";
-            this.textBoxPageNofN.ReadOnly = true;
-            this.textBoxPageNofN.Size = new System.Drawing.Size(71, 20);
-            this.textBoxPageNofN.TabIndex = 57;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label17.Location = new System.Drawing.Point(542, 507);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(207, 13);
-            this.label17.TabIndex = 58;
-            this.label17.Text = "You may want to save these for later tests.";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(41, 816);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(387, 64);
-            this.label25.TabIndex = 59;
-            this.label25.Text = resources.GetString("label25.Text");
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(768, 778);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(493, 48);
-            this.label24.TabIndex = 60;
-            this.label24.Text = resources.GetString("label24.Text");
-            // 
-            // checkBoxSaveImageAsTif
-            // 
-            this.checkBoxSaveImageAsTif.AutoSize = true;
-            this.checkBoxSaveImageAsTif.Location = new System.Drawing.Point(930, 18);
-            this.checkBoxSaveImageAsTif.Name = "checkBoxSaveImageAsTif";
-            this.checkBoxSaveImageAsTif.Size = new System.Drawing.Size(187, 17);
-            this.checkBoxSaveImageAsTif.TabIndex = 61;
-            this.checkBoxSaveImageAsTif.Text = "Open as PDF (see Note for Test7)";
-            this.checkBoxSaveImageAsTif.UseVisualStyleBackColor = true;
+            this.Column_Test5subject.Width = 150;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 911);
+            this.ClientSize = new System.Drawing.Size(1384, 931);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.buttonTest3A);
             this.Controls.Add(this.checkBoxSaveImageAsTif);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label25);
@@ -677,18 +719,22 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBoxTest7FaxID;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5units;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5costPerUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5contact;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5subject;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBoxPageNofN;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.CheckBox checkBoxSaveImageAsTif;
+        private System.Windows.Forms.Button buttonTest3A;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5units;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5costPerUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5SenderCSID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5contact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5DestFax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Test5subject;
     }
 }
 

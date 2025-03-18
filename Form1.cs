@@ -23,6 +23,8 @@ namespace KenHttpClientTestAppForInterfax
         const string testFolderPath = "TestData";
         //onst string testFileSmall = "Dummy File to test Interfax with small file.pdf";
         const string testFileSmall = "test - single page.pdf";
+        const string testFileSmallDocx = "test.docx";
+
         const string testTwoPageDocument = "Dummy 2-page document to test Interfax.pdf";
         const string simulatorSuccessFaxNumber = "+999-9999-0";
         const string simulatorFailureFaxNumber = "+999-9999-6017";
@@ -80,17 +82,47 @@ namespace KenHttpClientTestAppForInterfax
                 FaxSendOptions faxSendOptions = new FaxSendOptions("Información Económica");
                 string docFilepath = Path.Combine(testFolderPath, testFileSmall);
                 List<FaxDestination> faxDestinations = new List<FaxDestination>
-            {
-                new FaxDestination(simulatorSuccessFaxNumber, "George Washington"),
-                new FaxDestination(simulatorSuccessFaxNumber, "Darwin Núñez")
-            };
+                {
+                    new FaxDestination(simulatorSuccessFaxNumber, "George Washington"),
+                    new FaxDestination(simulatorSuccessFaxNumber, "Darwin Núñez")
+                };
                 long batchID = faxClient.SendFaxToMultipleDestinations(docFilepath, faxDestinations, faxSendOptions);
                 textBoxTest3BatchID.Text = batchID.ToString();
             }
             catch (Exception exc) { KenMessages.DisplayExceptionMessage(exc); }
             finally { Cursor.Current = Cursors.Arrow; }
         }
+        private void buttonTest3A_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                FaxSendOptions faxSendOptions = new FaxSendOptions("Información Económica");
+                List<FaxDestination> faxDestinations = new List<FaxDestination>
+                {
+                    new FaxDestination(simulatorSuccessFaxNumber, "George Washington"),
+                    new FaxDestination(simulatorSuccessFaxNumber, "Darwin Núñez")
+                };
+                // Tricky! We need absolute filepath for webbrowser to work in DlgFaxPdfDocument!
+                FileInfo fileInfo = new FileInfo(testFolderPath);
+                var dir = fileInfo.DirectoryName;
+                string pdfFilepath = Path.Combine(dir, testFolderPath, testFileSmall);
 
+                DlgFaxPdfDocument dlg = new DlgFaxPdfDocument(pdfFilepath, faxDestinations, faxSendOptions);
+                var result = dlg.ShowDialog();
+                if (result == DialogResult.Cancel)
+                {
+                    KenMessages.DisplayInfoMessage("Fax was not sent; fax was cancelled by user.");
+                }
+                else
+                {
+                    long batchID = faxClient.SendFaxToMultipleDestinations(pdfFilepath, faxDestinations, faxSendOptions);
+                    textBoxTest3BatchID.Text = batchID.ToString();
+                }
+            }
+            catch (Exception exc) { KenMessages.DisplayExceptionMessage(exc); }
+            finally { Cursor.Current = Cursors.Arrow; }
+        }
         private void buttonTest4_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBoxTest4BatchID.Text))
@@ -148,7 +180,9 @@ namespace KenHttpClientTestAppForInterfax
                     dgvrow.Cells[Column_Test5status.Index].Value = faxDetails.status.ToString();
                     dgvrow.Cells[Column_Test5units.Index].Value = faxDetails.units.ToString();
                     dgvrow.Cells[Column_Test5costPerUnit.Index].Value = faxDetails.costPerUnit.ToString();
+                    dgvrow.Cells[Column_Test5SenderCSID.Index].Value = faxDetails.senderCSID.ToString();
                     dgvrow.Cells[Column_Test5contact.Index].Value = faxDetails.contact.ToString();
+                    dgvrow.Cells[Column_Test5DestFax.Index].Value = faxDetails.destinationFax.ToString();
                     dgvrow.Cells[Column_Test5subject.Index].Value = faxDetails.subject.ToString();
                 }
             }
