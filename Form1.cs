@@ -63,9 +63,10 @@ namespace KenHttpClientTestAppForInterfax
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-                FaxSendOptions faxSendOptions = new FaxSendOptions("Test for Ken");
+                // Test with special characters
+                FaxSendOptions faxSendOptions = new FaxSendOptions("Información Económica");
                 string faxNumber = simulatorSuccessFaxNumber;
-                string contact = "Ken Smith (test)";
+                string contact = "Darwin Núñez (test)";
                 string docFilepath = Path.Combine(testFolderPath, testTwoPageDocument);
                 long faxID = faxClient.SendFaxToSingleDestination(docFilepath, contact, faxNumber, faxSendOptions);
                 textBoxTest2FaxID.Text = faxID.ToString();
@@ -83,8 +84,8 @@ namespace KenHttpClientTestAppForInterfax
                 string docFilepath = Path.Combine(testFolderPath, testFileSmall);
                 List<FaxDestination> faxDestinations = new List<FaxDestination>
                 {
-                    new FaxDestination(simulatorSuccessFaxNumber, "George Washington"),
-                    new FaxDestination(simulatorSuccessFaxNumber, "Darwin Núñez")
+                    new FaxDestination(simulatorSuccessFaxNumber, "Darwin Núñez"),
+                    new FaxDestination(simulatorSuccessFaxNumber, "George Washington")
                 };
                 long batchID = faxClient.SendFaxToMultipleDestinations(docFilepath, faxDestinations, faxSendOptions);
                 textBoxTest3BatchID.Text = batchID.ToString();
@@ -100,8 +101,8 @@ namespace KenHttpClientTestAppForInterfax
                 FaxSendOptions faxSendOptions = new FaxSendOptions("Información Económica");
                 List<FaxDestination> faxDestinations = new List<FaxDestination>
                 {
-                    new FaxDestination(simulatorSuccessFaxNumber, "George Washington"),
-                    new FaxDestination(simulatorSuccessFaxNumber, "Darwin Núñez")
+                    new FaxDestination(simulatorSuccessFaxNumber, "Darwin Núñez"),
+                    new FaxDestination(simulatorSuccessFaxNumber, "George Washington")
                 };
                 // Tricky! We need absolute filepath for webbrowser to work in DlgFaxPdfDocument!
                 FileInfo fileInfo = new FileInfo(testFolderPath);
