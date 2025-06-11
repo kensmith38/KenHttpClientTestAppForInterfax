@@ -85,6 +85,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="README.md" />
     <None Include="TestData\Dummy File to test Interfax with small file.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
